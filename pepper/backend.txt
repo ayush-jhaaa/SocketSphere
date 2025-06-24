@@ -1,0 +1,11 @@
+pepper/
+├── node_modules/
+├── src/
+│   ├── controllers/     # Business logic
+│   ├── models/          # MongoDB schemas
+│   ├── routes/          # API endpoints
+│   └── server.ts        # Main app entry
+├──.env
+├── package.json
+├── package-lock.json
+├── tsconfig.json

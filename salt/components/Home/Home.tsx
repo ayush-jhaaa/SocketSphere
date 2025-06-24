@@ -1,5 +1,6 @@
 // start showoff and make a login/Signup pop-up
-import React from 'react'
+
+
 
 function Home() {
   return (
