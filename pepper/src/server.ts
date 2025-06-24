@@ -2,8 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './config/db';
-import User from './models/User';
-import { Request,Response } from 'express';
+import router from './routes/create_user';
 dotenv.config();
 
 const app = express();
@@ -22,21 +21,7 @@ app.get('/', (_req, res) => {
 connectDB();
 
 
-app.post("/test", async (req:Request,res:Response):Promise<void> => {
-  try {
-    const { name} = req.body as {name:string};
-
-    if (!name) {
-      console.log(res.status(400).json({ message: "Name is required" }));
-    }
-
-    const newUser = new User({ name });
-    const savedUser = await newUser.save();
-    res.json({ message: "✅ User saved", user: savedUser });
-  } catch (err) {
-    res.status(500).json({ message: "❌ Error saving user", error: err });
-  }
-});
+app.use("/",router);
 
 
 app.listen(PORT, () => {

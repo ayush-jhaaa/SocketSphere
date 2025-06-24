@@ -2,7 +2,7 @@ import { createBrowserRouter, createRoutesFromElements, Route } from "react-rout
 import Layout from "./Layout";
 import Home from "../Components/Home/Home";
 import Login from "../Components/Login/Login";
-import SignIn from "../Components/Signin/SignIn";
+import SignIn from "../Components/Signin/Signin";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
