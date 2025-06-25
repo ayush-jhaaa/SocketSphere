@@ -14,7 +14,7 @@ const createUser = async (req:Request,res:Response):Promise<void> => {
         email : string,
         password : string
     };
-// check validity
+// check if form filled ?
     if (!name || !email || !password) {
       console.log(res.status(400).json({ message: "sahi se bharo" }));
     }
