@@ -30,11 +30,11 @@ const generateJWT  = async (req : Request,res : Response):Promise<void> => {
             
         // now generate jwt token
         const token = generateToken(checkUser._id.toString());
-        console.log(res.status(200).json({message:`JWT suucessfully generated${token}`}));
+        console.log(res.status(200).json({message:`JWT suucessfully generated => ${token}`}));
          
     }
     catch(err){
         console.log(res.status(500).json({message:"server error"}));
     }
 }
-export default generateJWT
+export default generateJWT;

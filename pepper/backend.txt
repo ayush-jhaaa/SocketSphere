@@ -1,10 +1,15 @@
 pepper/
 ├── node_modules/
 ├── src/
-│   ├── controllers/     # Business logic
-│   ├── models/          # MongoDB schemas
-│   ├── routes/          # API endpoints
-│   └── server.ts        # Main app entry
+│   ├── controllers/            # Business logic
+│   ├── models/                 # MongoDB schemas
+│   ├── routes/                 # API endpoints
+│   ├──routing_components       # All request Handlers here
+│   ├──middleware               # All middlewares for request
+│   ├──utils                    # All extra utilities (3rd party services in backend)
+│   │
+│   ├──server.ts                # Main app entry
+│
 ├──.env
 ├── package.json
 ├── package-lock.json
